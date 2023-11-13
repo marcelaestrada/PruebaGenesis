@@ -1,4 +1,3 @@
-// components/OrdenCorteEnsamblaje.js
 import React from "react";
 
 const OrdenCorteEnsamblaje = () => {

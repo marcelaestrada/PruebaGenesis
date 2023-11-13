@@ -1,4 +1,3 @@
-// components/VerPedidos.js
 import React from "react";
 
 const VerPedidos = () => {

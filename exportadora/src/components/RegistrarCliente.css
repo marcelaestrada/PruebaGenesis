@@ -1,0 +1,44 @@
+h2 {
+  color: #333;
+  margin-left: 150px;
+  font-family: "Roboto Mono", monospace;
+}
+
+button.agregar-cliente-btn {
+  background-color: #f26627;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 150px;
+  margin-left: 1155px;
+  display: block;
+}
+
+button.agregar-cliente-btn:hover {
+  background-color: #f9a26c;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #9bd7d1;
+  color: white;
+}
