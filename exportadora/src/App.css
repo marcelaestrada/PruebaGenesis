@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+.navbar {
+  background-color: #325d79;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.navbar-left {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 50px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #efeeee;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #f9a26c;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #9bd7d1;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.home-link {
+  text-decoration: none;
+}
+
+.titulo-exportadora {
+  font-family: "Rubik", sans-serif;
+  font-size: xx-large;
+  color: #efeeee;
+  padding-left: 20%;
 }
