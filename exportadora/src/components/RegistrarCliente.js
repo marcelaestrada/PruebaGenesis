@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AgregarClienteForm from "./NuevoCliente.js";
 import "./RegistrarCliente.css";
+import AgregarClienteForm from "./NuevoCliente.js";
+import OrdenCorteEnsamblaje from "./OrdenCorteEnsamblaje.js";
 
 const RegistrarCliente = () => {
   const clientesGuardados = JSON.parse(localStorage.getItem("clientes")) || [];
@@ -54,6 +55,7 @@ const RegistrarCliente = () => {
           ))}
         </tbody>
       </table>
+      <OrdenCorteEnsamblaje clientes={clientes} />
     </div>
   );
 };

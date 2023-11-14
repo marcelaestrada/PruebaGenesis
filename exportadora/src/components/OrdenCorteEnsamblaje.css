@@ -1,0 +1,48 @@
+.orden-corte-section {
+  margin-top: 60px;
+}
+
+.agregar-orden-btn {
+  background-color: #f26627;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 45%;
+}
+
+.orden-corte-section table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Roboto Mono", monospace;
+}
+
+.orden-corte-section th,
+.orden-corte-section td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+label {
+  font-family: "Roboto Mono", monospace;
+  display: block;
+  text-align: center;
+}
+
+input,
+select {
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.error-msg {
+  color: #f9a26c;
+}

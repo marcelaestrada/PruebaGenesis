@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
 import RegistrarCliente from "./components/RegistrarCliente.js";
 import VerPedidos from "./components/VerPedidos.js";
-import OrdenCorteEnsamblaje from "./components/OrdenCorteEnsamblaje.js";
+
+localStorage.clear();
 
 const App = () => {
   return (
@@ -20,17 +21,12 @@ const App = () => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/registrar-cliente" className="nav-link">
-                  Registrar Cliente
+                  Orden y ensamblaje
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/ver-pedidos" className="nav-link">
-                  Ver Pedidos
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/orden-corte-ensamblaje" className="nav-link">
-                  Orden de Corte o Ensamblaje
+                  Facturas
                 </Link>
               </li>
             </ul>
@@ -40,10 +36,6 @@ const App = () => {
         <Routes>
           <Route path="/registrar-cliente" element={<RegistrarCliente />} />
           <Route path="/ver-pedidos" element={<VerPedidos />} />
-          <Route
-            path="/orden-corte-ensamblaje"
-            element={<OrdenCorteEnsamblaje />}
-          />
         </Routes>
       </div>
     </Router>
