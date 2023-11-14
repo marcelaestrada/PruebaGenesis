@@ -9,35 +9,33 @@ localStorage.clear();
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav className="navbar">
-          <div className="navbar-left">
-            <Link to="/" className="home-link">
-              <p className="titulo-exportadora">Exportadora</p>
-            </Link>
-          </div>
+      <nav className="navbar">
+        <div className="navbar-left">
+          <Link to="/" className="home-link">
+            <p className="titulo-exportadora">Exportadora</p>
+          </Link>
+        </div>
 
-          <div className="navbar-right">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/registrar-cliente" className="nav-link">
-                  Orden y ensamblaje
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/ver-pedidos" className="nav-link">
-                  Facturas
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <div className="navbar-right">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/registrar-cliente" className="nav-link">
+                Orden y ensamblaje
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/ver-pedidos" className="nav-link">
+                Facturas
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-        <Routes>
-          <Route path="/registrar-cliente" element={<RegistrarCliente />} />
-          <Route path="/ver-pedidos" element={<VerPedidos />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/registrar-cliente" element={<RegistrarCliente />} />
+        <Route path="/ver-pedidos" element={<VerPedidos />} />
+      </Routes>
     </Router>
   );
 };

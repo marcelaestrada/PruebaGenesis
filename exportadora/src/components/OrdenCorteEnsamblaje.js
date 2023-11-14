@@ -1,4 +1,11 @@
 import React, { useState, useEffect } from "react";
+import {
+  obtenerNombreCliente,
+  obtenerDireccionCliente,
+  obtenerTelefonoCliente,
+  obtenerCorreoCliente,
+  obtenerFechaActual,
+} from "../funciones.js";
 import "./OrdenCorteEnsamblaje.css";
 
 const OrdenCorteEnsamblaje = ({ clientes }) => {
@@ -71,10 +78,27 @@ const OrdenCorteEnsamblaje = ({ clientes }) => {
 
   const handleEnsamblarClick = (index) => {
     const orden = ordenes[index];
+
     if (orden.capa1 && orden.capa2 && orden.capa3) {
-      console.log(`Ensamblando para la orden ${index}`);
-    } else {
-      console.log("No todos los checkboxes están seleccionados.");
+      const nuevaFactura = {
+        nombreCliente: obtenerNombreCliente(orden.nitCliente),
+        direccion: obtenerDireccionCliente(orden.nitCliente),
+        nit: orden.nitCliente,
+        telefono: obtenerTelefonoCliente(orden.nitCliente),
+        correo: obtenerCorreoCliente(orden.nitCliente),
+        cantidadCinchos: orden.cantidad,
+        fecha: obtenerFechaActual(),
+      };
+
+      const storedFacturas = JSON.parse(localStorage.getItem("facturas")) || [];
+      localStorage.setItem(
+        "facturas",
+        JSON.stringify([...storedFacturas, nuevaFactura])
+      );
+
+      const updatedOrdenes = [...ordenes];
+      updatedOrdenes.splice(index, 1);
+      setOrdenes(updatedOrdenes);
     }
   };
 
@@ -122,7 +146,7 @@ const OrdenCorteEnsamblaje = ({ clientes }) => {
           <div className="error-msg">{errores.cantidad}</div>
         </label>
         <button type="submit" className="agregar-orden-btn">
-          Agregar orden de compra
+          Agregar orden de corte
         </button>
       </form>
       <table>
